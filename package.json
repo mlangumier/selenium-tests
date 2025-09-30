@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha test/**/*.spec.js --timeout 120000 --parallel --retries 2"
+    "test-mocha": "npx mocha test/**/*.spec.js --timeout 120000 --parallel --retries 2",
+    "test-script": "node getting_started/runningTests.spec.js",
+    "test-1": "node test/lab1.spec.js",
+    "test-2": "node test/lab2.spec.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "assert": "^2.1.0",
     "selenium-webdriver": "^4.35.0"
