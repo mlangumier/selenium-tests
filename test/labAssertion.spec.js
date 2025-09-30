@@ -30,7 +30,10 @@ import assert from "assert";
     await driver.wait(until.elementLocated(By.id("validation_message_22_1")), 10000);
     const wrongEmailField = await driver.findElement(By.id("validation_message_22_1"));
     const errorMessage = await wrongEmailField.getText();
-    assert.equal("Veuillez compléter le champ pour valider votre inscription.", errorMessage);
+
+    // Verify the error message
+    assert.notEqual("Veuillez compléter le champ pour valider votre inscription.", errorMessage);
+    assert.equal("L’adresse e-mail saisie n’est pas valide, veuillez vérifier son formatage (p. ex. email@domaine.com).", errorMessage)
   } catch (e) {
     console.log(e)
   } finally {

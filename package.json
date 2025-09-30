@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-mocha": "npx mocha test/**/*.spec.js --timeout 120000 --parallel --retries 2",
+    "test-mocha": "npx mocha test/**/*.spec.js --timeout 120000 --retries 2",
     "test-script": "node getting_started/runningTests.spec.js",
     "test-1": "node test/lab1.spec.js",
     "test-2": "node test/lab2.spec.js",
-    "test-assert": "node test/labAssertion.spec.js"
+    "test-assert": "node test/labAssertion.spec.js",
+    "test-alert": "node test/labAlert.spec.js"
   },
   "keywords": [],
   "author": "",
